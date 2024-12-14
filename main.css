@@ -1,0 +1,397 @@
+@font-face {
+    font-family: "IGOR";
+    src: url(IGOR.ttf);
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+    background-image: url(img/bg.svg);      
+    background-position: center center;      
+    background-repeat: no-repeat;      
+    background-attachment: fixed;      
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.all{
+    padding: 80px 10px;
+    display: flex;
+    flex-direction: column; /* По умолчанию элементы будут располагаться вертикально */
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.header a, p, h1{
+    font-family: "IGOR";
+    font-size: 24px;
+    color: white;
+}
+
+.nav-item{
+    text-decoration: none;
+    letter-spacing: 2px
+}
+
+.nav-left{
+    margin-right: auto;
+}
+
+.content{
+    max-width: 1340px; /* Ограничение максимальной ширины */
+    margin: 0 auto;
+}
+
+.nav-right{
+    display: flex;
+    font-family: "IGOR";
+    text-decoration: none;
+}
+
+.main_content{
+    display: flex;
+}
+
+.main_content p{
+    font-family: "IGOR";
+    font-size: 210px;
+    color: white;
+    letter-spacing: 15px;
+    line-height: 70%;
+}
+
+.headerContent{
+    margin-bottom: 200px;
+}
+
+
+/*BASE CONTENT*/
+
+/*CALL*/
+.call{
+    display: flex;
+}
+
+.igor{
+    display: flex;
+}
+
+.flower{
+    display: flex;
+}
+
+.call-image{
+    z-index: 2;
+}
+
+.igor-image{
+    z-index: 2;
+}
+
+.flower-image{
+    z-index: 2;
+}
+
+
+.blur{
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    filter: blur(20px)
+}
+
+.blur, .call-image{
+    position: absolute;
+    width: 438px;
+    height: 438px;
+}
+
+.blur, .igor-image {
+    position: absolute;
+}
+
+.blur, .flower-image {
+    position: absolute;
+}
+
+.img-container {
+    position: relative;
+    width: 438px;
+    height: 432px;
+}
+
+.call-songs p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: white;
+    line-height: 30px;
+    margin-left: 40px;
+}
+
+.igor-songs p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: white;
+    padding-top: 7%;
+    line-height: 30px;
+    text-align: right;
+    padding-right: 2px;
+}
+
+.flower-songs p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: white;
+    padding-top: 7%;
+    line-height: 30px;
+    margin-left: 30px;
+}
+
+.nav-item:hover {
+    color: #FC4343;
+    cursor: pointer;
+}
+
+.typing {
+    letter-spacing: 2px
+}
+
+.text-1{
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 1s steps(10);
+        animation-delay: 0.4s;
+        cursor: .4s step-end infinite alternate;
+}
+
+.text-2{
+    width: 45%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 0.7s steps(6);
+        animation-delay: 1.45s;
+        cursor: .4s step-end infinite alternate;
+}
+
+.text-3{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 1.2s steps(10);
+        animation-delay: 2.3s;
+        cursor: .4s step-end infinite alternate;
+}
+
+.menu{
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.adaptAlbumIgor img{
+    padding-right: 320px;
+}
+
+.adaptAlbumFlower img{
+    padding-left: 560px;
+}
+
+.adaptAlbumCall img{
+    padding-left: 415px;
+}
+
+
+@keyframes typing{
+    from {width: 0;}
+}
+
+@keyframes cursor{
+    50% {border-color: transparent}
+}
+
+@media screen and (max-width: 1800px) {
+    .img-container img, .blur{
+        width: 600px;
+        height: 600px;
+    }
+    .call{
+        display: block;
+    }
+    .flower{
+        display: block;
+    }
+    .igor{
+        display: block;
+    }
+    .img-container{
+        margin-left: 28%;
+    }
+    .adaptAlbumCall img{
+        padding-left: 100px;
+    }
+    .adaptAlbumCall{
+        margin-top: 18%;
+    }
+    .adaptAlbumFlower img{
+        padding-left: 20%;
+    }
+    .adaptAlbumFlower{
+        margin-top: 15%;
+    }
+    .adaptAlbumIgor img{
+        padding-right: 300px;
+    }
+    .call-songs p{
+        margin-left: 330px;
+        font-size: 25px;
+        line-height: 45px;
+    }
+    .flower-songs p{
+        margin-left: 340px;
+        font-size: 25px;
+        line-height: 45px;
+    }
+    .igorYear {
+        order: 3;
+    }
+    .igor-songs{
+        order: 2;
+    }
+    .adaptAlbumIgor .img-container {
+        order: 1;
+    }
+    .igor-songs p{
+        text-align: left;
+        margin-left: 18%;
+        font-size: 25px;
+        line-height: 45px;
+    }
+    .igor-songs{
+        margin-left: 15%;
+    }
+    .igorYear{
+        margin-left: 6%;
+    }
+    .igor .img-container{
+        margin-bottom: 14%;
+    }
+}
+
+@media screen and (max-width: 1630px) {
+
+    .mid_img{
+        order: 2;
+        
+    }
+    .mid_img img{
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+        margin-left: auto;
+    }
+    .textImg img{
+        padding: 0px;
+    }
+    .textImg{
+        margin-right: 100%;
+        order: 1;
+        margin-left: 0px;
+    }
+    .downImg{
+        display: none;
+    }
+}
+
+@media (max-width: 1440px) {
+    .content{
+        max-width: 1000px;
+    }
+    .downImg, .topImg{
+        display: none;
+    }
+    .headerContent p{
+        font-size: 200px;
+    }
+    .igorYear, .flowerYear, .callYear{
+        display: none;
+    }
+    .call-songs p{
+        margin-left: 220px;
+        margin-top: 40px;
+    }
+    .flower-songs p{
+        margin-left: 220px;
+        margin-top: 40px;
+    }
+    .igor-songs p{
+        margin-left: 70px;
+        margin-top: 40px;
+    }
+    .img-container{
+        margin-left: 21%;
+    }
+}
+
+@media (max-width: 1220px) {
+    .all{
+        padding: 60px 100px;
+    }
+    .content{
+        max-width: 1000px;
+    }
+    .headerContent p{
+        font-size: 200px;
+    }
+    .call-songs p{
+        margin-left: 220px;
+        margin-top: 40px;
+    }
+    .flower-songs p{
+        margin-left: 220px;
+        margin-top: 40px;
+    }
+    .igor-songs p{
+        margin-left: 70px;
+        margin-top: 40px;
+    }
+    .img-container{
+        margin-left: 21%;
+    }
+}
+
+@media screen and (min-width: 480px) {
+
+}
+
+@media screen and (min-width: 320px) {
+
+}
